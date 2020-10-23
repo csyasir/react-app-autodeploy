@@ -40,5 +40,5 @@ jobs:
       
         # Deploying
       - name: Deploying Application
-        run: surge ./build yasirbootcampsample.surge.sh --token ${{secret.SURGE_TOKEN}}
+        run: surge ./build yasirbootcampsample.surge.sh --token ${{secrets.SURGE_TOKEN}}
        
