@@ -6,7 +6,7 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -29,16 +29,16 @@ jobs:
       # installing node modules
       - name: Installing node modules
         run: npm install
-       
-        # build project 
+
+        # build project
       - name: Building Application
-        run: npm run build
-        
-         # Install Surge
+        run:
+          npm run build
+
+          # Install Surge
       - name: Installing Surge
         run: npm i -g surge
-      
+
         # Deploying
       - name: Deploying Application
-        run: surge ./build yasirbootcampsample.surge.sh --token ${{secrets.SURGE_TOKEN}}
-       
+        run: surge ./build  ymreactpractice.surge.sh --token ${{secrets.SURGE_TOKEN}}
