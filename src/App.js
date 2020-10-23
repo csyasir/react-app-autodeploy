@@ -1,10 +1,13 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
+
+import Counter from './components/counter/counter'
 
 function App() {
   return (
     <div className="App">
-      <h1>This is testing auto deploy</h1>
+      <Counter value = {10} />
+      <Counter value = {100} />
     </div>
   );
 }
